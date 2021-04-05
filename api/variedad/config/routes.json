@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/variedads",
+      "handler": "variedad.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/variedads/count",
+      "handler": "variedad.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/variedads/:id",
+      "handler": "variedad.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/variedads",
+      "handler": "variedad.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/variedads/:id",
+      "handler": "variedad.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/variedads/:id",
+      "handler": "variedad.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

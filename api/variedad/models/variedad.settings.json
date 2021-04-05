@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variedads",
+  "info": {
+    "name": "variedad"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "talla": {
+      "type": "string"
+    },
+    "medidas": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer"
+    }
+  }
+}

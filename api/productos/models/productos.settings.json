@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "productos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "comerciante": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "calificacion": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "variedades": {
+      "collection": "variedad"
+    },
+    "genero": {
+      "type": "enumeration",
+      "enum": [
+        "H",
+        "M"
+      ]
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "categoria": {
+      "model": "categorias",
+      "via": "productos"
+    }
+  }
+}
