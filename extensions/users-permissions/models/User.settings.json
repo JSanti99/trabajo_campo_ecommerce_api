@@ -67,6 +67,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "ability": {
+      "type": "component",
+      "repeatable": true,
+      "component": "control.ability"
     }
   }
 }

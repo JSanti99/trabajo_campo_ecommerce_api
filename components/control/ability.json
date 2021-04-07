@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_control_abilities",
+  "info": {
+    "name": "ability",
+    "icon": "lock"
+  },
+  "options": {},
+  "attributes": {
+    "action": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    }
+  }
+}
