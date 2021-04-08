@@ -11,17 +11,17 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nombre": {
+    "name": {
       "type": "string"
     },
-    "comerciante": {
+    "brand": {
       "plugin": "users-permissions",
       "model": "user"
     },
-    "descripcion": {
+    "description": {
       "type": "richtext"
     },
-    "calificacion": {
+    "rating": {
       "type": "integer",
       "min": 0,
       "max": 5
@@ -42,6 +42,25 @@
     "categoria": {
       "model": "categorias",
       "via": "productos"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0
+    },
+    "hasFreeShipping": {
+      "type": "boolean"
     }
   }
 }
