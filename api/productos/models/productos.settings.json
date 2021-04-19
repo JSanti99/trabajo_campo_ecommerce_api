@@ -61,6 +61,10 @@
     },
     "hasFreeShipping": {
       "type": "boolean"
+    },
+    "tienda": {
+      "via": "productos",
+      "model": "tienda"
     }
   }
 }

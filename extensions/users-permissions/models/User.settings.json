@@ -72,6 +72,25 @@
       "type": "component",
       "repeatable": true,
       "component": "control.ability"
+    },
+    "tienda": {
+      "model": "tienda",
+      "via": "user"
+    },
+    "docType": {
+      "type": "string"
+    },
+    "docNumber": {
+      "type": "integer"
+    },
+    "firstNames": {
+      "type": "string"
+    },
+    "lastNames": {
+      "type": "string"
+    },
+    "mobilePhone": {
+      "type": "string"
     }
   }
 }

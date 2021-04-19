@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiendas",
+  "info": {
+    "name": "tienda",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "socialNetworks": {
+      "type": "json"
+    },
+    "address": {
+      "type": "string"
+    },
+    "productos": {
+      "collection": "productos",
+      "via": "tienda"
+    },
+    "user": {
+      "via": "tienda",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
