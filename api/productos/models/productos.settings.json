@@ -40,8 +40,8 @@
       "type": "string"
     },
     "categoria": {
-      "model": "categorias",
-      "via": "productos"
+      "via": "productos",
+      "model": "categorias"
     },
     "slug": {
       "type": "string"

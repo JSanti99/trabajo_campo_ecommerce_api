@@ -11,15 +11,15 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nombre": {
+    "label": {
       "type": "string"
     },
-    "slug": {
+    "value": {
       "type": "string"
     },
     "productos": {
-      "via": "categoria",
-      "collection": "productos"
+      "collection": "productos",
+      "via": "categoria"
     }
   }
 }
