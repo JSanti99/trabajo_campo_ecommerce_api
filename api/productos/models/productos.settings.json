@@ -31,17 +31,14 @@
     },
     "genero": {
       "type": "enumeration",
-      "enum": [
-        "H",
-        "M"
-      ]
+      "enum": ["H", "M"]
     },
     "codigo": {
       "type": "string"
     },
-    "categoria": {
+    "category": {
       "via": "productos",
-      "model": "categorias"
+      "model": "category"
     },
     "slug": {
       "type": "string"
@@ -49,9 +46,7 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },

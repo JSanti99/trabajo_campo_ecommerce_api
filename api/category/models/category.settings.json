@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categorias",
+  "collectionName": "category",
   "info": {
-    "name": "categorias",
+    "name": "category",
     "description": ""
   },
   "options": {
@@ -19,7 +19,7 @@
     },
     "productos": {
       "collection": "productos",
-      "via": "categoria"
+      "via": "category"
     }
   }
 }
