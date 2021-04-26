@@ -37,4 +37,22 @@ module.exports = {
       ),
     };
   },
+  async create(ctx) {
+    let entity;
+    let user = ctx.state.user;
+    if (ctx.is("multipart")) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.productos.create(data, { files });
+    } else {
+      ctx.request.body.variedades = await Promise.all(
+        ctx.request.body.variedades.map(async (variedad) => {
+          return await strapi.services.variedad.create(variedad);
+        })
+      );
+      //ctx.request.body.tienda = user.tienda;
+      entity = await strapi.services.productos.create(ctx.request.body);
+    }
+
+    return sanitizeEntity(entity, { model: strapi.models.productos });
+  },
 };

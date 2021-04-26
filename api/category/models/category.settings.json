@@ -18,8 +18,8 @@
       "type": "string"
     },
     "productos": {
-      "collection": "productos",
-      "via": "category"
+      "via": "category",
+      "collection": "productos"
     }
   }
 }
