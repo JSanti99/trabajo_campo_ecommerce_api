@@ -39,8 +39,8 @@
     "codigo": {
       "type": "string"
     },
-    "categoria": {
-      "model": "categorias",
+    "category": {
+      "model": "category",
       "via": "productos"
     },
     "slug": {
@@ -55,16 +55,21 @@
       "plugin": "upload",
       "required": false
     },
-    "price": {
-      "type": "decimal",
-      "min": 0
-    },
     "hasFreeShipping": {
       "type": "boolean"
     },
     "tienda": {
-      "via": "productos",
-      "model": "tienda"
+      "model": "tienda",
+      "via": "productos"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

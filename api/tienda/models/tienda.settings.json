@@ -21,8 +21,8 @@
       "type": "string"
     },
     "productos": {
-      "collection": "productos",
-      "via": "tienda"
+      "via": "tienda",
+      "collection": "productos"
     },
     "user": {
       "via": "tienda",

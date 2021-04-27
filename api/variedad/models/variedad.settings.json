@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "variedads",
   "info": {
-    "name": "variedad"
+    "name": "variedad",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -21,6 +22,9 @@
     },
     "stock": {
       "type": "integer"
+    },
+    "estado": {
+      "type": "string"
     }
   }
 }
