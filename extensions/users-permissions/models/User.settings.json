@@ -91,6 +91,9 @@
     },
     "mobilePhone": {
       "type": "string"
+    },
+    "epaycoUserId": {
+      "type": "string"
     }
   }
 }
