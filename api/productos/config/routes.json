@@ -18,6 +18,15 @@
     },
     {
       "method": "GET",
+      "path": "/productosBySlug/:slug",
+      "handler": "productos.findOneBySlug",
+      "config": {
+        "policies": []
+      }
+    },
+
+    {
+      "method": "GET",
       "path": "/productos/:id",
       "handler": "productos.findOne",
       "config": {

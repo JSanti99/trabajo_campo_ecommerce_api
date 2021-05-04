@@ -43,9 +43,6 @@
       "model": "category",
       "via": "productos"
     },
-    "slug": {
-      "type": "string"
-    },
     "image": {
       "model": "file",
       "via": "related",
@@ -70,6 +67,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

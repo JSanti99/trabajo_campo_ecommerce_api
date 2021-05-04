@@ -55,4 +55,10 @@ module.exports = {
 
     return sanitizeEntity(entity, { model: strapi.models.productos });
   },
+  async findOneBySlug(ctx) {
+    const { slug } = ctx.params;
+
+    const entity = await strapi.services.productos.findOne({ slug });
+    return sanitizeEntity(entity, { model: strapi.models.productos });
+  },
 };
