@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "epayco-sdk-node": "^1.0.7",
     "knex": "0.21.18",
     "sqlite3": "5.0.0",
     "strapi": "3.5.4",
