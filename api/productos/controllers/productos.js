@@ -8,19 +8,14 @@ module.exports = {
    */
 
   async find(ctx) {
-    let { page, perPage } = ctx.query;
-    page = parseInt(page);
-    perPage = parseInt(perPage);
     let entities;
     let count;
-    entities = await strapi.services.productos.find();
     try {
-      console.log({ page, perPage });
-      entities = entities.slice(
-        (page - 1) * perPage,
-        (page - 1) * perPage + perPage
-      );
-      // console.log({ entities });
+      if (ctx.query._q) {
+        entities = await strapi.services.productos.search(ctx.query);
+      } else {
+        entities = await strapi.services.productos.find(ctx.query);
+      }
     } catch (err) {
       console.log(err);
     }
