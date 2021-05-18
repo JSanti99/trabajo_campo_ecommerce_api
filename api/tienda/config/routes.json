@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/tiendas/:id/products",
+      "handler": "tienda.findProducts",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/tiendas",
       "handler": "tienda.create",

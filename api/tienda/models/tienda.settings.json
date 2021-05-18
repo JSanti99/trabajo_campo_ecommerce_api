@@ -28,6 +28,15 @@
       "via": "brand",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "coverImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

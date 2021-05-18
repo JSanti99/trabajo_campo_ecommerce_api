@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facturas",
+  "info": {
+    "name": "facturas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "total": {
+      "type": "string"
+    },
+    "ref": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "date"
+    }
+  }
+}

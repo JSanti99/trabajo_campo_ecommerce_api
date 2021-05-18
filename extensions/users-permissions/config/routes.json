@@ -7,6 +7,42 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/epayco/customer/:id",
+      "handler": "Epayco.customer",
+      "config": {
+        "prefix": "",
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/epayco/customer/:id",
+      "handler": "Epayco.customer",
+      "config": {
+        "prefix": "",
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/epayco/subscribe",
+      "handler": "Epayco.subscribe",
+      "config": {
+        "prefix": "",
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/epayco/subscriptions",
+      "handler": "Epayco.subscriptions",
+      "config": {
+        "prefix": "",
+        "policies": []
+      }
     }
   ]
 }
