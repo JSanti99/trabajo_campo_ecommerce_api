@@ -17,9 +17,6 @@
     "medidas": {
       "type": "string"
     },
-    "precio": {
-      "type": "decimal"
-    },
     "stock": {
       "type": "integer"
     },

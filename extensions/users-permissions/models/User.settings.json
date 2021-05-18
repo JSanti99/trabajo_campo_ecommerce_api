@@ -73,7 +73,7 @@
       "repeatable": true,
       "component": "control.ability"
     },
-    "tienda": {
+    "brand": {
       "model": "tienda",
       "via": "user"
     },
@@ -91,6 +91,9 @@
     },
     "mobilePhone": {
       "type": "string"
+    },
+    "cart": {
+      "model": "cart"
     }
   }
 }

@@ -2,57 +2,56 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/productos",
-      "handler": "productos.find",
+      "path": "/carts",
+      "handler": "cart.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/productos/count",
-      "handler": "productos.count",
+      "path": "/carts/count",
+      "handler": "cart.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/productosBySlug/:slug",
-      "handler": "productos.findOneBySlug",
-      "config": {
-        "policies": []
-      }
-    },
-
-    {
-      "method": "GET",
-      "path": "/productos/:id",
-      "handler": "productos.findOne",
+      "path": "/carts/:id",
+      "handler": "cart.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/productos",
-      "handler": "productos.create",
+      "path": "/carts",
+      "handler": "cart.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cartDeleteProduct",
+      "handler": "cart.cartDeleteProduct",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/productos/:id",
-      "handler": "productos.update",
+      "path": "/carts/:id",
+      "handler": "cart.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/productos/:id",
-      "handler": "productos.delete",
+      "path": "/carts/:id",
+      "handler": "cart.delete",
       "config": {
         "policies": []
       }
