@@ -21,11 +21,11 @@
       "type": "string"
     },
     "productos": {
-      "via": "tienda",
+      "via": "brand",
       "collection": "productos"
     },
     "user": {
-      "via": "tienda",
+      "via": "brand",
       "plugin": "users-permissions",
       "model": "user"
     }

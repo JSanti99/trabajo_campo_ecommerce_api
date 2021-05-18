@@ -131,12 +131,13 @@ module.exports = {
     const user = await strapi.plugins["users-permissions"].services.user.fetch({
       id,
     });
-    console.log({ user });
     if (!user) {
       return ctx.badRequest(null, [
         { messages: [{ id: "No authorization header was found" }] },
       ]);
     }
+
+    user.cart = await strapi.services.cart.findOne({ id: user.cart.id });
 
     ctx.body = sanitizeUser(user);
   },

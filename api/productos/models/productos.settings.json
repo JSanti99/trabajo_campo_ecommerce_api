@@ -14,10 +14,6 @@
     "name": {
       "type": "string"
     },
-    "brand": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "description": {
       "type": "richtext"
     },
@@ -55,7 +51,7 @@
     "hasFreeShipping": {
       "type": "boolean"
     },
-    "tienda": {
+    "brand": {
       "model": "tienda",
       "via": "productos"
     },
@@ -71,6 +67,9 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "precio": {
+      "type": "decimal"
     }
   }
 }
