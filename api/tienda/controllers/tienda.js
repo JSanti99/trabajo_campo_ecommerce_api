@@ -7,29 +7,22 @@ const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async findProducts(ctx) {
-    let { id } = ctx.params;
-    console.log({ id });
-    let { page, perPage } = ctx.query;
-    page = parseInt(page);
-    perPage = parseInt(perPage);
-    let tienda;
-    let count;
+    const { id } = ctx.params;
     let productos;
     try {
-      tienda = await strapi.services.tienda.findOne({ id });
-      productos = tienda.productos;
-      count = productos.length;
-      productos = productos.slice(
-        (page - 1) * perPage,
-        (page - 1) * perPage + perPage
-      );
-      // console.log({ entities });
+      if (ctx.query._q) {
+        productos = await strapi.services.productos.search(ctx.query);
+      } else {
+        productos = await strapi.services.productos.find(ctx.query);
+      }
     } catch (err) {
       console.log(err);
     }
-    console.log({ count, productos });
+    productos = productos
+      .filter((p) => p.tienda)
+      .filter((p) => p.tienda.id !== id);
     return {
-      total: count,
+      total: productos.length,
       products: productos.map((entity) =>
         sanitizeEntity(entity, { model: strapi.models.productos })
       ),
