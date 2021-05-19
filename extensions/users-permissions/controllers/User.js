@@ -100,9 +100,9 @@ module.exports = {
    */
   async destroy(ctx) {
     const { id } = ctx.params;
-    const data = await strapi.plugins[
-      "users-permissions"
-    ].services.user.remove({ id });
+    const data = await strapi.plugins["users-permissions"].services.user.remove(
+      { id }
+    );
     ctx.send(sanitizeUser(data));
   },
 
