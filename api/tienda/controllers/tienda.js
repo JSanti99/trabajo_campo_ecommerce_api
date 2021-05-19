@@ -19,8 +19,9 @@ module.exports = {
       console.log(err);
     }
     productos = productos
-      .filter((p) => p.tienda)
-      .filter((p) => p.tienda.id !== id);
+      .filter((p) => p.brand)
+      .filter((p) => p.brand.id != id);
+
     return {
       total: productos.length,
       products: productos.map((entity) =>

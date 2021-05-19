@@ -68,7 +68,7 @@
       "type": "uid",
       "targetField": "name"
     },
-    "precio": {
+    "price": {
       "type": "decimal"
     }
   }

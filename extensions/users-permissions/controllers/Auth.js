@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
   async refreshToken(ctx) {
     const { id } = ctx.request.body;
