@@ -20,7 +20,7 @@ module.exports = {
     }
     productos = productos
       .filter((p) => p.brand)
-      .filter((p) => p.brand.id != id);
+      .filter((p) => p.brand.id == id);
 
     return {
       total: productos.length,
